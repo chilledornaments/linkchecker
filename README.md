@@ -8,6 +8,14 @@
 
 `./linkchecker https://example.com`
 
+### Batches
+
+Simple solution with Bash:
+
+```shell
+for site in https://example.com https://example.com/test; do ./linkchecker $site; done
+```
+
 ## Outputs
 
 ### OK
