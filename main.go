@@ -21,7 +21,8 @@ func checkLink(link string) (int, bool) {
 	resp, err := client.Do(req)
 
 	if err != nil {
-		panic(fmt.Sprintf("Error checking link %s, %s", link, err.Error()))
+		fmt.Println("Error checking link", link, ",", err.Error())
+		return 500, false
 	}
 
 	resp.Body.Close()
