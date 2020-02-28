@@ -24,6 +24,8 @@ func checkLink(link string) (int, bool) {
 		panic(fmt.Sprintf("Error checking link %s, %s", link, err.Error()))
 	}
 
+	resp.Body.Close()
+
 	if resp.StatusCode == 404 {
 		return 404, false
 	}
